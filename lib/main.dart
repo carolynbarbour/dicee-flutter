@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,6 +20,18 @@ void main() {
 class DicePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    var randDiceOne = Random().nextInt(5) + 1;
+    var randDiceTwo = Random().nextInt(5) + 1;
+
+    return SafeArea(
+      child: Center(
+        child: Row(
+          children: [
+            Expanded(child: Image.asset('images/dice$randDiceOne.png')),
+            Expanded(child: Image.asset('images/dice$randDiceTwo.png')),
+          ],
+        ),
+      ),
+    );
   }
 }
