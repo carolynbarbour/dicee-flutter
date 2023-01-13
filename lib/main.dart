@@ -27,8 +27,16 @@ class DicePage extends StatelessWidget {
       child: Center(
         child: Row(
           children: [
-            Expanded(child: Image.asset('images/dice$randDiceOne.png')),
-            Expanded(child: Image.asset('images/dice$randDiceTwo.png')),
+            Expanded(
+                child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Image.asset('images/dice$randDiceOne.png'),
+            )),
+            Expanded(
+                child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Image.asset('images/dice$randDiceTwo.png'),
+            )),
           ],
         ),
       ),
